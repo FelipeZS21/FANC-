@@ -2,13 +2,14 @@ import { useState } from "react"
 import "./Log.css"
 import CodeText from "../CodeText/CodeText"
 import Button from "../Button/Button"
-import { Link } from "react-router-dom"
+import { Link , useNavigate} from "react-router-dom"
 import axios from 'axios'
 
 const Log = () =>{
 
     const [name, actualizarName] = useState("")
     const [password, actualizarPass] = useState("")
+    const navigateTo = useNavigate()
 
     const loginUser = (event) =>{
         event.preventDefault();
@@ -17,11 +18,18 @@ const Log = () =>{
             LoginUserName: name 
         }).then((response)=> {
             console.log(response)
+
+            if(response.data.message){
+                navigateTo('/LoginUsers')
+            }
+            else{
+                navigateTo('/')
+            }
         })
     } 
 
     return <section className="login-service">
-        <h2>Iniciar sesion</h2>
+        <h1>Bienvenido!</h1>
         <form onSubmit={loginUser}>
             <CodeText 
                 title = "Nombre de usuario"

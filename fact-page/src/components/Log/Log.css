@@ -8,10 +8,12 @@
     font-family: 'Montserrat', sans-serif;;
 }
 
-.login-service h2{
+.login-service h1{
     width: 60%;
     text-align: center;
-    border-bottom: 1px solid #3AC43A;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #AF601A;
+    font-size: 2rem;
 }
 
 .login-service form{
