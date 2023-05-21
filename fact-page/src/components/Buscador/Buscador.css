@@ -1,7 +1,5 @@
 .search-bar{
-    width: 40%;
-    display: flex;
-    justify-content: flex-end;
+    width: 30%;
 }
 
 .search-bar input{

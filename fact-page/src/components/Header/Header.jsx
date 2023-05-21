@@ -13,21 +13,9 @@ function Header(){
                             <img src="/logo_fact.png" alt="Fact" />
                         </Link>
                     </div>
-                    <Buscador></Buscador>
                     <nav className="menu-header">
+                    <Buscador></Buscador>
                         <ul>
-                            <li className="menu-item">
-                                <Link className='link' to="/usersAdminReg">New-ad</Link>
-                            </li>
-                            <li className="menu-item">
-                                <Link className='link' to="/KillAdmin">Del-ad</Link>
-                            </li>
-                            <li className="menu-item">
-                                <Link className='link' to="/BookAdd">New-book</Link>
-                            </li>
-                            <li className="menu-item">
-                                <Link className='link' to="/UsersReg">New-client</Link>
-                            </li>
                             <li className="menu-item">
                                 <Link className='link-image' to="/LoginUsers"><img src={image} alt="icon-acount" /></Link>
                             </li>
