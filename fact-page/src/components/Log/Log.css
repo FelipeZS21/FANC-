@@ -11,17 +11,7 @@
 .login-service h2{
     width: 60%;
     text-align: center;
-    padding-bottom: 10px;
     border-bottom: 1px solid #3AC43A;
-}
-
-@media screen and (max-width: 400px){
-    .login-service h2{
-        width: 60%;
-        text-align: center;
-        padding-bottom: 10px;
-        border-bottom: 1px solid #1736e7;
-    }
 }
 
 .login-service form{
@@ -31,7 +21,11 @@
 .button-division{
     width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin: 0;
 }
 
 .help-container {
@@ -41,8 +35,5 @@
     justify-content: center;
     align-items: center;
     font-size: 15px;
-}
-
-.help-container p{
-    margin-top: 10px;
+    margin-bottom: 5px;
 }

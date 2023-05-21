@@ -39,13 +39,13 @@ const Log = () =>{
                 actualizarValor={actualizarPass}
             ></CodeText>
             <div className="button-division">
+                <div className="help-container">
+                    <Link to="/"><p> Has olvidado tu contraseña?</p></Link>
+                    <Link to="/"><p> Has olvidado tu nombre de usuario?</p></Link>
+                </div>
                 <Button>Iniciar sesion</Button>
             </div>
         </form>
-        <div className="help-container">
-            <Link to="/"><p> Has olvidado tu contraseña?</p></Link>
-            <Link to="/"><p> Has olvidado tu nombre de usuario?</p></Link>
-        </div>
     </section>
 }
 
