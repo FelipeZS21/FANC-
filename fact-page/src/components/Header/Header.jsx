@@ -2,6 +2,7 @@ import image from '../../../public/Imgs/outline-account.png'
 import "./Header.css"
 import { Link } from 'react-router-dom'
 import Buscador from '../Buscador/Buscador'
+import DropDownMenu from '../DropdownMenu/DropdownMenu'
 
 function Header(){
     return(
@@ -17,7 +18,8 @@ function Header(){
                     <Buscador></Buscador>
                         <ul>
                             <li className="menu-item">
-                                <Link className='link-image' to="/LoginUsers"><img src={image} alt="icon-acount" /></Link>
+                                {/* <Link className='link-image' to="/LoginUsers"><img src={image} alt="icon-acount" /></Link> */}
+                                <DropDownMenu></DropDownMenu>
                             </li>
                         </ul>
                     </nav>

@@ -1,10 +1,23 @@
-.dropdownItem{
+.dropdown-item{
     display: flex;
-    margin: 10px auto;
+    margin: 3px;
 }
 
-.dropdownItem a{
+.dropdown-item img{
+    width: 1.6rem;
+    margin-right: 0px;
+    opacity: 0.5;
+    transition: var(--speed);
+} 
+
+.dropdown-item p{
+    color: #000000;
     max-width: 100px;
     margin-left: 10px;
     transition: var(--speed);
+    text-decoration: none;
+}
+
+.dropdown-item .links{
+    text-decoration: none;
 }
