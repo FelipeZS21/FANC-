@@ -1,4 +1,4 @@
-import { useState } from "react" 
+import { useEffect, useState } from "react" 
 import "./Log.css"
 import CodeText from "../CodeText/CodeText"
 import Button from "../Button/Button"
@@ -9,6 +9,9 @@ const Log = () =>{
 
     const [name, actualizarName] = useState("")
     const [password, actualizarPass] = useState("")
+    const [loginStatus, actualizarLoginStatus] = useState("")
+    const [statusHolder, actualizarStatusHolder] = useState("message")
+
     const navigateTo = useNavigate()
 
     const loginUser = (event) =>{
@@ -21,6 +24,9 @@ const Log = () =>{
 
             if(response.data.message){
                 navigateTo('/LoginUsers')
+                actualizarLoginStatus("Las credenciales no coinciden")
+                actualizarName("")
+                actualizarPass("")
             }
             else{
                 navigateTo('/')
@@ -28,9 +34,24 @@ const Log = () =>{
         })
     } 
 
+    useEffect(() =>{
+        if(loginStatus !== ''){
+            actualizarStatusHolder('login-state-container')
+            setTimeout(() => {
+                actualizarStatusHolder('message')
+            }, 100000);
+        }
+    },[loginStatus]
+    )
+
     return <section className="login-service">
         <h1>Bienvenido!</h1>
         <form onSubmit={loginUser}>
+            <div className={statusHolder}>
+                <span className="login-state">
+                    {loginStatus}
+                </span>
+            </div>
             <CodeText 
                 title = "Nombre de usuario"
                 required
