@@ -61,7 +61,7 @@ app.post('/LoginUsers', (req, res) =>{
     const sentLoginPassword = req.body.LoginPassword
     const sentLoginUserName = req.body.LoginUserName
 
-    const SQL = 'SELECT * FROM clientes WHERE usuario = ? && contraseña = ?'
+    const SQL = 'SELECT * clientes WHERE usuario = ? && contraseña = ?'
 
     const Values = [sentLoginUserName, sentLoginPassword]
 
@@ -71,7 +71,6 @@ app.post('/LoginUsers', (req, res) =>{
         }
         if(results.length > 0){
             res.send(results)
-            console.log(SQL)
             console.log(Values)
         }
         else{

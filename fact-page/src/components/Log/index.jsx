@@ -20,16 +20,18 @@ const Log = () =>{
             LoginPassword: password, 
             LoginUserName: name 
         }).then((response)=> {
-            console.log(response)
+            const Obj = Object.values(response.data[0])
+            console.log(Obj[11])
 
             if(response.data.message){
                 navigateTo('/LoginUsers')
                 actualizarLoginStatus("Las credenciales no coinciden")
                 actualizarName("")
                 actualizarPass("")
-            }
-            else{
-                navigateTo('/')
+            }else{
+                if(Obj[11] == 1){
+                    navigateTo('/')
+                }
             }
         })
     } 
@@ -69,8 +71,8 @@ const Log = () =>{
             ></CodeText>
             <div className="button-division">
                 <div className="help-container">
-                    <Link to="/"><p> Has olvidado tu contraseña?</p></Link>
-                    <Link to="/"><p> Has olvidado tu nombre de usuario?</p></Link>
+                    <Link to="/"><p> olvidaste tu contraseña o usuario?</p></Link>
+                    <Link to="/UsersReg"><p> Aun no te has registrado? hazlo ahora!</p></Link>
                 </div>
                 <Button>Iniciar sesion</Button>
             </div>

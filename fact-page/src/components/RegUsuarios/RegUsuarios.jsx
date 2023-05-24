@@ -170,11 +170,11 @@ const RegUsuarios = () =>{
                     valor={cityHome}
                     actualizarValor={actualizarCityHome}
                 />
+                <div className="button-division">
+                <Button>Registrar</Button>
+            </div>
                 </div>
             </section>
-            <div className="button-division">
-                    <Button>Registrar</Button>
-                </div>
         </form>
     </section>
 }

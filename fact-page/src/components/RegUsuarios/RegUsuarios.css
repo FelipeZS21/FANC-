@@ -5,7 +5,7 @@
 .user-register-service h2{
   margin: 30px 45px 5px 45px;
   padding: 5px;
-  border-bottom: 1px solid #3AC43A;
+  border-bottom: 1px solid #AF601A;
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -28,4 +28,5 @@
   margin: 10px 0;
   width: 100%;
   display: flex;
+  align-items: flex-end;
 }

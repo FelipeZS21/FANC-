@@ -1,4 +1,5 @@
 .container-home-page {
+    margin-top: 50px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -7,19 +8,11 @@
     align-items: center;
 }
 
-.home-page-principal {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.home-page-principal img{
+.container-home-page img{
     width: 30%;
     margin-bottom: 10px;
 }
 
-.home-page-principal p{
+.container-home-page p{
     font-size: 20px;
 }
