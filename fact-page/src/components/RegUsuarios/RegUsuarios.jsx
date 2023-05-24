@@ -44,7 +44,8 @@ const RegUsuarios = () =>{
             Email: email,           
             CountryHome: countryHome, 
             Password: password, 
-            UserName: userName 
+            UserName: userName, 
+            IdCargo: '1'
         }).then(()=> {
             console.log('User has been created')
         })

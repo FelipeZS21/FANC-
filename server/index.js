@@ -30,8 +30,9 @@ app.post('/UsersReg', (req, res) =>{
     const setPassword = req.body.Password
     const setUserName = req.body.UserName
     const setID = req.body.ID
+    const setIdCargo = req.body.IdCargo 
 
-    const SQL = 'INSERT INTO clientes (ID,primerNombre, segundoNombre, primerApellido, segundoApellido, lugarNacimiento, fechaNacimiento, correoElectronico, direccionCorrespondencia, contraseña, usuario) VALUES (?,?,?,?,?,?,?,?,?,?,?)'
+    const SQL = 'INSERT INTO clientes (ID,primerNombre, segundoNombre, primerApellido, segundoApellido, lugarNacimiento, fechaNacimiento, correoElectronico, direccionCorrespondencia, contraseña, usuario, IdCargo) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)'
 
     const Values = [setID,
         sentFirstName,
@@ -43,14 +44,15 @@ app.post('/UsersReg', (req, res) =>{
         setEmail, 
         setCountryHome, 
         setPassword,
-        setUserName]
+        setUserName,
+        setIdCargo]
 
     db.query(SQL, Values, (err, results) =>{
         if(err){
             res.send(err)
         }
         else{
-            console.log('User inserted successfully')
+            console.log(Values)
             res.send({message: 'User Added'})
         }
     })
@@ -61,7 +63,7 @@ app.post('/LoginUsers', (req, res) =>{
     const sentLoginPassword = req.body.LoginPassword
     const sentLoginUserName = req.body.LoginUserName
 
-    const SQL = 'SELECT * clientes WHERE usuario = ? && contraseña = ?'
+    const SQL = 'SELECT * FROM clientes WHERE usuario = ? && contraseña = ?'
 
     const Values = [sentLoginUserName, sentLoginPassword]
 

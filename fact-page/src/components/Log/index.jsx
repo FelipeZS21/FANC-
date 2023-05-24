@@ -20,8 +20,7 @@ const Log = () =>{
             LoginPassword: password, 
             LoginUserName: name 
         }).then((response)=> {
-            const Obj = Object.values(response.data[0])
-            console.log(Obj[11])
+            // const Obj = Object.values(response.data[0])
 
             if(response.data.message){
                 navigateTo('/LoginUsers')
@@ -29,7 +28,10 @@ const Log = () =>{
                 actualizarName("")
                 actualizarPass("")
             }else{
-                if(Obj[11] == 1){
+                const Obj = Object.values(response.data[0])
+                if(Obj[11] == 3){
+                    navigateTo('/HomeRoot')
+                }else{
                     navigateTo('/')
                 }
             }

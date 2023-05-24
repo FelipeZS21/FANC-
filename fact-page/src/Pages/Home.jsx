@@ -4,16 +4,18 @@ import Header from "../components/Header/Header"
 
 const Home = () =>{
     return(
-        <main className="container-home-page">
+        <div className="principal">
             <Header></Header>
-            <div className="home-page-principal">
-                <img src={image} alt="working-in-that" />
-                <p>
-                    Estamos trabajando para crear una mejor pagina, nos vemos 
-                    pronto!!
-                </p>
-            </div>
-        </main>
+            <main className="container-home-page">
+                <div className="home-page-principal">
+                    <img src={image} alt="working-in-that" />
+                    <p>
+                        Estamos trabajando para crear una mejor pagina, nos vemos 
+                        pronto!!
+                    </p>
+                </div>
+            </main>
+        </div>
     )
 }
 

@@ -1,10 +1,6 @@
-// import { useState } from 'react'
-// import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
 import './App.css'
 import Header from './components/Header/Header'
-// import Formulario from './components/Form/Form'
-// import MiOrg from './components/MiOrg'
+import HomeRoot from './Pages/HomeRoot'
 import Log from './components/Log/index'
 import Error404 from './Pages/Page404'
 import Home from './Pages/Home'
@@ -28,6 +24,7 @@ function App() {
     <Router>
       <Routes>
         <Route path='/' element={<Home/>}/>
+        <Route path='/HomeRoot' element={<HomeRoot/>}/>
         <Route path='/LoginUsers' element={<LoginUsers/>}/>
         <Route path='/usersAdminReg' element={<UsersAdminReg/>}/>
         <Route path='/KillAdmin' element={<KillAdmin/>}/>
