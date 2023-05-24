@@ -1,10 +1,11 @@
-import { useState } from "react" 
-import "./RegAdmins.css"
-import CodeText from "../CodeText/CodeText"
-import Button from "../Button/Button"
-import OptionsList from "../OptionsList/OptionList"
 import Location from "../Location/Location"
+import OptionsList from "../OptionsList/OptionList";
 // import { Link } from "react-router-dom"
+import { useState } from "react";
+import "./RegAdmins.css";
+import CodeText from "../CodeText/CodeText";
+import Button from "../Button/Button";
+import axios from 'axios'
 
 const RegAdmins = () =>{
 
@@ -28,29 +29,27 @@ const RegAdmins = () =>{
     const optionsDepartment = ["Risaralda"]
     const optionsCity = ["Pereira","Dosquebradas"]
 
-    const sendInfo = (event) => {
-        event.preventDefault()
-        let datosAEnviar = {
-            firstName,
-            secondName,
-            firstLastName,
-            secondLastName,
-            gender,
-            birthday,
-            email, 
-            country,
-            department,
-            city, 
-            userName, 
-            password, 
-            confirmPassword
-        }
-        console.log(datosAEnviar)
-    }
+    const createUser = () =>{
+        axios.post('http://localhost:3002/usersAdminReg',{
+            FirstName: firstName,
+            SecondName: secondName,
+            FirstLastName: firstLastName,
+            SecondLastName: secondLastName, 
+            Country: country, 
+            ID:Id,
+            Birthday: birthday, 
+            Email: email,            
+            Password: password, 
+            UserName: userName, 
+            IdCargo: '2'
+        }).then(()=> {
+            console.log('User has been created')
+        })
+    } 
 
     return <section className="admin-register-service">
         <h2>Nuevo Administrador</h2>
-        <form onSubmit={sendInfo}>
+        <form onSubmit={createUser}>
             <section className="division-form">
                 <div className="subdivision-form">
                     <CodeText

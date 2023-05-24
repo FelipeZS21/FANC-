@@ -31,8 +31,9 @@ const Log = () =>{
                 const Obj = Object.values(response.data[0])
                 if(Obj[11] == 3){
                     navigateTo('/HomeRoot')
-                }else{
-                    navigateTo('/')
+                }
+                if(Obj[11] == 2){
+                    navigateTo('/HomeAdmin')
                 }
             }
         })

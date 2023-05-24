@@ -1,8 +1,8 @@
-import "./DropDownMenuRoot.css"
+import "./DropDownMenuAdmin.css"
 import DropdownItem from "../DropdownItem/DropdownItem"
 import React, {useState, useEffect, useRef} from 'react';
 
-const DropDownMenuRoot = () =>{
+const DropDownMenuAdmin = () =>{
 
     const [open, setOpen] = useState(false);
 
@@ -32,14 +32,14 @@ const DropDownMenuRoot = () =>{
             <div className={`dropdown-menu ${open? 'active' : 'inactive'}`}>
                 <ul>
                     <DropdownItem 
-                        img="..\..\..\public\Imgs\add.png" 
-                        text="Agregar administrador"
-                        link="/usersAdminReg"
+                        img="..\..\..\public\Imgs\books.png" 
+                        text="Administrar libros"
+                        link="/HomeAdmin"
                     ></DropdownItem>
                     <DropdownItem 
-                        img="..\..\..\public\Imgs\delete.png" 
-                        text="Eliminar administrador"
-                        link="/KillAdmin"
+                        img="..\..\..\public\Imgs\settings.png" 
+                        text="Configurar cuenta"
+                        link="/HomeAdmin"
                     ></DropdownItem>
                     <DropdownItem 
                         img="..\..\..\public\Imgs\logout.png" 
@@ -52,4 +52,4 @@ const DropDownMenuRoot = () =>{
     )
 }
 
-export default DropDownMenuRoot
+export default DropDownMenuAdmin

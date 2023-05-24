@@ -1,16 +1,16 @@
 import image from '../../../public/Imgs/outline-account.png'
-import "./HeaderRoot.css"
+import "./HeaderAdmin.css"
 import { Link } from 'react-router-dom'
 import Buscador from '../Buscador/Buscador'
-import DropDownMenuRoot from '../DropDownMenuRoot/DropdownMenuRoot'
+import DropDownMenuAdmin from '../DropDownMenuAdmin/DropdownMenuAdmin'
 
-function HeaderRoot(){
+function HeaderAdmin(){
     return(
         <header>
             <div className='wave-bar-navegation-container'>
                 <div className="division-nav-wave">
                     <div className="header-container">
-                        <Link to="/HomeRoot" className="logo-ref-home">
+                        <Link to="/HomeAdmin" className="logo-ref-home">
                             <img src="/logo_fact.png" alt="Fact" />
                         </Link>
                     </div>
@@ -19,7 +19,7 @@ function HeaderRoot(){
                         <ul>
                             <li className="menu-item">
                                 {/* <Link className='link-image' to="/LoginUsers"><img src={image} alt="icon-acount" /></Link> */}
-                                <DropDownMenuRoot></DropDownMenuRoot>
+                                <DropDownMenuAdmin></DropDownMenuAdmin>
                             </li>
                         </ul>
                     </nav>
@@ -33,4 +33,4 @@ function HeaderRoot(){
     ) 
 }
 
-export default HeaderRoot
+export default HeaderAdmin

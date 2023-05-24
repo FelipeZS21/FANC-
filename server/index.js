@@ -58,6 +58,45 @@ app.post('/UsersReg', (req, res) =>{
     })
 })
 
+app.post('/usersAdminReg', (req, res) =>{
+    const sentFirstName = req.body.FirstName
+    const setSecondName = req.body.SecondName
+    const setFirstLastName = req.body.FirstLastName
+    const setSecondLastName = req.body.SecondLastName
+    const setCountry = req.body.Country
+    const setBirthday = req.body.Birthday
+    const setEmail = req.body.Email
+    const setPassword = req.body.Password
+    const setUserName = req.body.UserName
+    const setID = req.body.ID
+    const setIdCargo = req.body.IdCargo 
+
+    const SQL = 'INSERT INTO clientes (ID,primerNombre, segundoNombre, primerApellido, segundoApellido, fechaNacimiento, correoElectronico, lugarNacimiento, contraseña, usuario, IdCargo) VALUES (?,?,?,?,?,?,?,?,?,?,?)'
+
+    const Values = [setID,
+        sentFirstName,
+        setSecondName, 
+        setFirstLastName, 
+        setSecondLastName, 
+        setBirthday,
+        setEmail,   
+        setCountry, 
+        setPassword,
+        setUserName,
+        setIdCargo]
+
+    db.query(SQL, Values, (err, results) =>{
+        console.log("hello world")
+        if(err){
+            res.send(err)
+        }
+        else{
+            console.log(Values)
+            res.send({message: 'User Admin Added'})
+        }
+    })
+})
+
 app.post('/LoginUsers', (req, res) =>{
     
     const sentLoginPassword = req.body.LoginPassword
@@ -77,6 +116,26 @@ app.post('/LoginUsers', (req, res) =>{
         }
         else{
             res.send({message: 'Las credenciales no concuerdan'})
+        }
+    })
+})
+
+app.post('/KillAdmin', (req, res) =>{
+    
+    const setID = req.body.ID
+    const setIdCargo = req.body.IdCargo 
+
+    const SQL = 'DELETE FROM clientes WHERE ID = ?  && IdCargo = ?'
+
+    const Values = [setID, setIdCargo]
+
+    db.query(SQL, Values, (err, results) =>{
+        if(err){
+            res.send({error: err})
+            console.log("error")
+        }else{
+            res.send(results)
+            console.log(Values)
         }
     })
 })

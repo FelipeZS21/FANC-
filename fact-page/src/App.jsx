@@ -1,6 +1,7 @@
 import './App.css'
 import Header from './components/Header/Header'
 import HomeRoot from './Pages/HomeRoot'
+import HomeAdmin from './Pages/HomeAdmin'
 import Log from './components/Log/index'
 import Error404 from './Pages/Page404'
 import Home from './Pages/Home'
@@ -25,6 +26,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/HomeRoot' element={<HomeRoot/>}/>
+        <Route path='/HomeAdmin' element={<HomeAdmin/>}/>
         <Route path='/LoginUsers' element={<LoginUsers/>}/>
         <Route path='/usersAdminReg' element={<UsersAdminReg/>}/>
         <Route path='/KillAdmin' element={<KillAdmin/>}/>
