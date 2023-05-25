@@ -10,6 +10,7 @@ import UsersAdminReg from './Pages/UsersAdminReg'
 import KillAdmin from './Pages/KillAdmin'
 import UsersReg from './Pages/UsersReg'
 import BookAdd from './Pages/BookAdd'
+import ShowInformation from './Pages/ShowInformation'
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
         <Route path='/HomeAdmin' element={<HomeAdmin/>}/>
         <Route path='/LoginUsers' element={<LoginUsers/>}/>
         <Route path='/usersAdminReg' element={<UsersAdminReg/>}/>
+        <Route path='/ShowInformation' element={<ShowInformation/>}/>
         <Route path='/KillAdmin' element={<KillAdmin/>}/>
         <Route path='/BookAdd' element={<BookAdd/>}/>
         <Route path='/UsersReg' element={<UsersReg/>}/>

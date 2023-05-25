@@ -34,7 +34,7 @@ const DropDownMenuAdmin = () =>{
                     <DropdownItem 
                         img="..\..\..\public\Imgs\books.png" 
                         text="Administrar libros"
-                        link="/HomeAdmin"
+                        link="/ShowInformation"
                     ></DropdownItem>
                     <DropdownItem 
                         img="..\..\..\public\Imgs\settings.png" 
