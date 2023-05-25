@@ -6,14 +6,21 @@ import {Typography, TableBody , Table, TableContainer, TableHead, TableRow, Tabl
 import EditOutlined from '@mui/icons-material/EditOutlined'
 import DeleteOutlineOutlinedIcon from '@mui/icons-material/DeleteOutlineOutlined';
 
+
 const ShowInformation = () =>{
 
     const [userList, setUserList] = useState([])
+
+    const [books, setBooks] = useState([])
+    const [tableBooks, setTableBooks] = useState([])
+    const [search, setSearch] = useState([])
 
     useEffect(() => {
         const getUsers = async () => {
             const {data} = await axios.get('http://localhost:3002/ShowInformation')
             setUserList(data)
+            setBooks(data)
+            setTableBooks(data)
         };
         // then call it here
         getUsers();
@@ -22,7 +29,21 @@ const ShowInformation = () =>{
 
     return <div className="principal">
         <HeaderAdmin></HeaderAdmin>
-        <TableContainer>
+        <div className="container-information">
+            <div className="container-information text">
+                <h2>Administracion de libros</h2>
+            </div>
+            <div className="container-input">
+                <input 
+                    className="form-control inputSearch"
+                    value={search} 
+                    placeholder="Busca tu libro o autor favorito"
+                />
+                <button className="btn btn-sourcess">
+                    <img src="../../../Public/Imgs/search.png" alt="" />
+                </button>
+            </div>
+            <TableContainer>
             <Table>
                 <TableHead>
                     <TableRow>
@@ -51,6 +72,7 @@ const ShowInformation = () =>{
                 </TableBody>
             </Table>
         </TableContainer>
+        </div>
     </div>
 }
 
