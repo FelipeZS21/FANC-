@@ -19,13 +19,38 @@ const ShowInformation = () =>{
         const getUsers = async () => {
             const {data} = await axios.get('http://localhost:3002/ShowInformation')
             setUserList(data)
-            setBooks(data)
-            setTableBooks(data)
         };
         // then call it here
         getUsers();
     }, []);
+
+    // const peticionGet=async()=>{
+    //     await axios.get("http://localhost:3002/ShowInformation")
+    //     .then(response=>{
+    //         setBooks(response.data);
+    //         setTableBooks(response.data);
+    //     }).catch(error=>{
+    //         console.log(error);
+    //     })
+    // }
+
+    const handleChange = (event) =>{
+        setSearch(event.target.value)
+        filter("Busqueda: "+event.target.value)
+    }
+
+    // const filter = (TermOfSearch) =>{
+    //     var resultSearch = tableBooks.filter((element)=>{
+    //         if(element.TITULO.toString().toLowerCase().includes(TermOfSearch.toLowerCase())||element.AUTOR.toString().toLowerCase().includes(TermOfSearch.toLowerCase())){
+    //             return element; 
+    //         }
+    //     })
+    //     setBooks(resultSearch); 
+    // }
     
+    // useEffect(()=>{
+    //     peticionGet();
+    //     },[])
 
     return <div className="principal">
         <HeaderAdmin></HeaderAdmin>
@@ -38,6 +63,7 @@ const ShowInformation = () =>{
                     className="form-control inputSearch"
                     value={search} 
                     placeholder="Busca tu libro o autor favorito"
+                    onChange={handleChange}
                 />
                 <button className="btn btn-sourcess">
                     <img src="../../../Public/Imgs/search.png" alt="" />
