@@ -77,7 +77,9 @@ const Log = () =>{
                     <Link to="/"><p> olvidaste tu contraseña o usuario?</p></Link>
                     <Link to="/UsersReg"><p> Aun no te has registrado? hazlo ahora!</p></Link>
                 </div>
-                <Button>Iniciar sesion</Button>
+                <div className="button-container">
+                    <Button>Iniciar sesion</Button>
+                </div>
             </div>
         </form>
     </section>

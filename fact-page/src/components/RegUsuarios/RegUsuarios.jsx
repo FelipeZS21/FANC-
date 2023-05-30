@@ -3,6 +3,7 @@ import OptionsList from "../OptionsList/OptionList";
 // import { Link } from "react-router-dom"
 import { useState } from "react";
 import "./RegUsuarios.css";
+import { useNavigate } from "react-router-dom"
 import CodeText from "../CodeText/CodeText";
 import Button from "../Button/Button";
 import axios from 'axios'
@@ -31,6 +32,7 @@ const RegUsuarios = () =>{
     const optionsCountry = ["Colombia","Argentina","Chile","Uruguay","Brasil","Ecuador"]
     const optionsDepartment = ["Risaralda"]
     const optionsCity = ["Pereira","Dosquebradas"]
+    const navigateTo = useNavigate()
 
     const createUser = () =>{
         axios.post('http://localhost:3002/UsersReg',{
@@ -46,9 +48,9 @@ const RegUsuarios = () =>{
             Password: password, 
             UserName: userName, 
             IdCargo: '1'
-        }).then(()=> {
-            console.log('User has been created')
         })
+        
+        navigateTo('/')
     } 
 
     return <section className="user-register-service">

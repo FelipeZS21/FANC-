@@ -1,6 +1,6 @@
 import Location from "../Location/Location"
 import OptionsList from "../OptionsList/OptionList";
-// import { Link } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 import { useState } from "react";
 import "./RegAdmins.css";
 import CodeText from "../CodeText/CodeText";
@@ -28,6 +28,8 @@ const RegAdmins = () =>{
     const optionsCountry = ["Colombia","Argentina","Chile","Uruguay","Brasil","Ecuador"]
     const optionsDepartment = ["Risaralda"]
     const optionsCity = ["Pereira","Dosquebradas"]
+    const navigateTo = useNavigate()
+
 
     const createUser = () =>{
         axios.post('http://localhost:3002/usersAdminReg',{
@@ -42,9 +44,10 @@ const RegAdmins = () =>{
             Password: password, 
             UserName: userName, 
             IdCargo: '2'
-        }).then(()=> {
-            console.log('User has been created')
         })
+
+        navigateTo('/HomeRoot')
+
     } 
 
     return <section className="admin-register-service">
