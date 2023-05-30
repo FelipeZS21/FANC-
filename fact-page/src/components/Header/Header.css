@@ -3,7 +3,6 @@ header{
     display: flex;
     justify-content:space-between;
     font-family: 'Montserrat', sans-serif;
-    margin-bottom: 10px;
 }
 
 .header-container {
