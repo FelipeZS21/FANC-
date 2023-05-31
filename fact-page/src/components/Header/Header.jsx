@@ -3,8 +3,13 @@ import "./Header.css"
 import { Link } from 'react-router-dom'
 import Buscador from '../Buscador/Buscador'
 import DropDownMenu from '../DropdownMenu/DropdownMenu'
+import ScrollDirection from '../ScrollDirection/ScrollDirection'
+import * as Scroll from 'react-scroll'
 
 function Header(){
+
+    const LinkScroll = Scroll.Link
+    
     return(
         <header>
             <div className='wave-bar-navegation-container'>
@@ -17,6 +22,11 @@ function Header(){
                     <nav className="menu-header">
                     <Buscador></Buscador>
                         <ul>
+                            <li className='menu-item'>Catalogo</li>
+                            <li className='menu-item'>
+                                <ScrollDirection direction="About-us" name="Informacion">
+                                </ScrollDirection>
+                            </li>
                             <li className="menu-item">
                                 {/* <Link className='link-image' to="/LoginUsers"><img src={image} alt="icon-acount" /></Link> */}
                                 <DropDownMenu></DropDownMenu>

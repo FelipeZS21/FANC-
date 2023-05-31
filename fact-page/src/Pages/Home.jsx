@@ -3,6 +3,7 @@ import '../assets/css/Home.css'
 import Header from "../components/Header/Header"
 import Slider from "../components/Slider/Slider"
 import Information from "../components/Information/information"
+import { Link } from "react-router-dom"
 
 const Home = () =>{
     return(
@@ -11,7 +12,7 @@ const Home = () =>{
                 <div className="slider-section">
                     <Slider></Slider>
                 </div>
-                <div className="information-section">
+                <div className="information-section" id="About-us"> 
                     <Information></Information>
                 </div>
             </main>
