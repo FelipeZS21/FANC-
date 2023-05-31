@@ -6,14 +6,14 @@ import Slider from "../components/Slider/Slider"
 const Home = () =>{
     return(
         <div className="principal">
-            <div className="bar-nav">
-                <Header></Header>
-            </div>
             <main className="container-home-page">
                 <Slider></Slider>
                 <section className=""></section>
                 <section className=""></section>
             </main>
+            <div className="bar-nav">
+                <Header></Header>
+            </div>
         </div>
     )
 }
