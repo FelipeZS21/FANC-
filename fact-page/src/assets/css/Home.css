@@ -8,6 +8,18 @@
     position: absolute;
 }
 
+.slider-section{
+    width: 100%;
+}
+
+.categories-section{
+    width: 100%;
+}
+
+.information-section{
+    width: 100%;
+}
+
 .bar-nav{
     width: 100%;
     position: absolute;
