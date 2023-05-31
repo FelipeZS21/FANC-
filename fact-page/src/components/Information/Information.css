@@ -1,0 +1,28 @@
+.principal-container{
+    display: flex;
+    margin: 3rem; 
+    align-items: center;
+}
+
+.about-us{
+    padding: 1rem;
+    margin-left: 3rem;
+}
+
+.img-information img{
+    width: 100%;
+    transition: .5s;
+}
+
+.img-information img:hover{
+    scale: 1.1;
+    filter: drop-shadow(0 0 5px #121212);
+}
+
+.text-information h2{
+    margin-bottom: 1rem;
+}
+
+.text-information p{
+    width: 90%;
+}

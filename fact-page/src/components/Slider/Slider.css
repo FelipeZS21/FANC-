@@ -1,12 +1,11 @@
 .slider{
-    width: 100%;
-    height: 500px;
+    height: 450px;
     overflow: hidden;
 }
 
 .slides{
     width: 500%;
-    height: 500px;
+    height: 450px;
     display: flex;
 }
 
@@ -17,31 +16,41 @@
 .slide{
     width: 20%;
     transition: 2s;
+    display: flex;
+    align-items: center;
+}
+
+.slide:hover{
+    scale: 1.05;
 }
 
 .slide img{
     width: 100%;
-    height: 800px;
+    height: 600px;
 }
 
 .text-about{
-    margin: 1rem 1rem 1rem 3rem;
+    overflow: hidden;
+    padding-top: 4rem;
+    margin: 1rem;
     width: 100%;
-    height: 100%;
     position: absolute;
     display:flex;
     flex-direction: column;
     justify-content: center;
+    text-align: center;
+    align-items: center;
 } 
 
 .text-about h1{
-    font-size: 5rem;
+    margin-bottom: 1rem;
+    font-size: 3rem;
     color:#ffffff; 
 }
 
 .text-about p{
     width: 70%;
-    font-size: 2rem;
+    font-size: 1.5rem;
     color:#ffffff; 
 }
 
@@ -91,7 +100,7 @@
     position: absolute;
     display: flex;
     justify-content: center;
-    margin-top: 460px;
+    margin-top: 410px;
 }
 
 .navigation-auto div{
