@@ -18,38 +18,35 @@ const Categorias = () =>{
 
 
     return(
-        <div className="principal-container-category">
-            <div className="box-container-category">
-                <img src="../../Public/Imgs/psicologia.png" alt="" />
-                <h2>Psicologia</h2>
+        <div className="principal">
+            <div className="box-text-category">
+                <h2>Categorias preferidas: </h2>
             </div>
-            <div className="box-container-category">
-                <img src="../../Public/Imgs/psicologia.png" alt="" />
-                <h2>Psicologia</h2>
-            </div>
-            <div className="box-container-category">
-                <img src="../../Public/Imgs/psicologia.png" alt="" />
-                <h2>Psicologia</h2>
-            </div>
-            <div className="box-container-category">
-                <img src="../../Public/Imgs/psicologia.png" alt="" />
-                <h2>Psicologia</h2>
-            </div>
-            <div className="box-container-category">
-                <img src="../../Public/Imgs/psicologia.png" alt="" />
-                <h2>Psicologia</h2>
-            </div>
-            <div className="box-container-category">
-                <img src="../../Public/Imgs/psicologia.png" alt="" />
-                <h2>Psicologia</h2>
-            </div>
-            <div className="box-container-category">
-                <img src="../../Public/Imgs/psicologia.png" alt="" />
-                <h2>Psicologia</h2>
-            </div>
-            <div className="box-container-category">
-                <img src="../../Public/Imgs/psicologia.png" alt="" />
-                <h2>Psicologia</h2>
+            <div className="principal-container-category">
+                <div className="box-container-category">
+                    <img src="../../Public/Imgs/aventura.png" alt="" />
+                    <h2>Aventura</h2>
+                </div>
+                <div className="box-container-category">
+                    <img src="../../Public/Imgs/accion.png" alt="" />
+                    <h2>Accion</h2>
+                </div>
+                <div className="box-container-category">
+                    <img src="../../Public/Imgs/ficcion.png" alt="" />
+                    <h2>Ficcion</h2>
+                </div>
+                <div className="box-container-category">
+                    <img src="../../Public/Imgs/terror.png" alt="" />
+                    <h2>Terror</h2>
+                </div>
+                <div className="box-container-category">
+                    <img src="../../Public/Imgs/romance.png" alt="" />
+                    <h2>Romance</h2>
+                </div>
+                <div className="box-container-category">
+                    <img src="../../Public/Imgs/psicologia.png" alt="" />
+                    <h2>Psicologia</h2>
+                </div>
             </div>
         </div>
     )
