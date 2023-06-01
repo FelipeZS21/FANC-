@@ -5,6 +5,7 @@ import Slider from "../components/Slider/Slider"
 import Information from "../components/Information/information"
 import { Link } from "react-router-dom"
 import Categorias from "../components/Categorias/Categorias"
+import Footer from "../components/Footer/Footer"
 
 const Home = () =>{
     return(
@@ -18,6 +19,9 @@ const Home = () =>{
                 </div>
                 <div className="information-section" id="About-us"> 
                     <Information></Information>
+                </div>
+                <div className="footer-section"> 
+                    <Footer></Footer>
                 </div>
             </main>
             <div className="bar-nav">
