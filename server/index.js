@@ -150,7 +150,7 @@ app.get('/ShowInformation', (req,res) =>{
     })
 })
 
-app.post("/BookAdd", (req, res) => {
+app.post('/AddBook', (req, res) => {
     const setId = req.body.Id;
     const setTitulo = req.body.Titulo;
     const setAutor = req.body.Autor;
@@ -178,8 +178,10 @@ app.post("/BookAdd", (req, res) => {
     db.query(SQL, Values, (err, results) => {
         if (err) {
             res.send(err);
+            console.log(Values)
         } else {
-            navigateTo("./HomeUser");
+            console.log('hello world')
+            console.log(err)
         }
     });
 });

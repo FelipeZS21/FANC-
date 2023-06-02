@@ -5,7 +5,6 @@ import Button from "../Button/Button";
 import axios from "axios";
 
 const AddBook = () => {
-  const [book, actualizarBook] = useState("");
   const [tituloLibro, actualizarName] = useState("");
   const [autorLibro, actualizarAuthor] = useState("");
   const [numeroPaginas, actualizarPages] = useState("");
@@ -16,10 +15,10 @@ const AddBook = () => {
   const [estadoLibro, actualizarEstado] = useState("");
   const [idLibro, actualizarId] = useState("");
 
-  const img = "../../Public/Imgs/" + imagen
-
   const SentBook = () => {
-    axios.post("http://localhost:3002/BookAdd", {
+    const img = "../../Public/Imgs/" + imagen
+    console.log(img)
+    axios.post('http://localhost:3002/AddBook', {
         Id: idLibro,
         Titulo: tituloLibro,
         Autor: autorLibro,
@@ -30,7 +29,8 @@ const AddBook = () => {
         Precio: precio,
         Imagen: img
       })
-      .then(() => {});
+      
+      navigateTo("./HomeAdmin");
   };
 
   return (
