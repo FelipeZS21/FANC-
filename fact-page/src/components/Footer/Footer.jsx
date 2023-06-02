@@ -7,7 +7,7 @@ const Footer =()=>{
                 <img src="../../Public/logo_fact.png" alt="" />
             </div>
             <div className="section-footer second-footer-container">
-                <h3>Todos los derechos reservados | Copyright ©
+                <h3>Todos los derechos reservados | Copyright disclaimer©
                     <br /><br />  Colombia - Pereira <br /><br /> 
                     Universidad Tecnologica de Pereira
                 </h3>

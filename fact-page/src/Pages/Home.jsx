@@ -6,6 +6,7 @@ import Information from "../components/Information/information"
 import { Link } from "react-router-dom"
 import Categorias from "../components/Categorias/Categorias"
 import Footer from "../components/Footer/Footer"
+import ShowBooksHome from "../components/ShowBooksHome/ShowBooksHome"
 
 const Home = () =>{
 
@@ -17,6 +18,9 @@ const Home = () =>{
                 </div>
                 <div className="categories-section" id="Categorias"> 
                     <Categorias></Categorias>
+                </div>
+                <div className="showBooks-section" id="show-books-section"> 
+                    <ShowBooksHome></ShowBooksHome>
                 </div>
                 <div className="information-section" id="About-us"> 
                     <Information></Information>

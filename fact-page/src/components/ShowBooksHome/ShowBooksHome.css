@@ -1,0 +1,44 @@
+.principal-main-show-books{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.box-books{
+    margin: 0 0.5rem;
+}
+
+.container-new-books{
+    width: 100%;
+    border: solid;
+    border-width: 0.15rem; 
+    border-radius: 0.5rem;
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    transition: 0.5s;
+}
+
+.container-new-books:hover{
+    background-color: #AF601A;
+    color: #ffffff;
+    scale: 1.05;
+}
+
+.text-box-book{
+    width: 180px;
+    height: 80px;
+    margin-bottom: 0.5rem;
+}
+
+.container-new-books img{
+    width: 180px;
+    height: 260px;
+}
+
+.container-new-books h2{
+    font-size: 1rem;
+}
+
