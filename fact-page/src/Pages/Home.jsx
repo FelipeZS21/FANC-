@@ -8,6 +8,7 @@ import Categorias from "../components/Categorias/Categorias"
 import Footer from "../components/Footer/Footer"
 
 const Home = () =>{
+
     return(
         <div className="principal">
             <main className="container-home-page">

@@ -1,16 +1,17 @@
 import './Slider.css'
 
-var counter = 1;
-
-setInterval(function(){
-    document.getElementById('radio' + counter).checked = true;
-    counter++; 
-    if(counter > 4){
-        counter = 1;
-    }
-}, 9000); 
-
 const Slider = () =>{
+
+    var counter = 1;
+
+    setInterval(function(){
+        document.getElementById('radio' + counter).checked = true;
+        counter++; 
+        if(counter > 4){
+            counter = 1;
+        }
+    }, 9000); 
+
     return(
         <div className="slider">
             <div className="slides">

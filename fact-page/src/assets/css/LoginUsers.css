@@ -1,5 +1,12 @@
 .login-container{
+    margin-top: 5rem;
     width: 100%;
     display: flex;
     justify-content: center;
+    position: absolute;
+}
+
+.bar-nav{
+    width: 100%;
+    position: fixed;
 }

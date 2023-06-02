@@ -5,7 +5,9 @@ import Header from "../components/Header/Header"
 const LoginUsers = () =>{
     return (
         <div className="principal">
-            <Header></Header>
+            <div className="bar-nav">
+                <Header></Header>
+            </div>
             <section className='login-container'>
                 <Log></Log>
             </section>
