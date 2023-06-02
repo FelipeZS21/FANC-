@@ -3,6 +3,13 @@
     flex-wrap: wrap;
 }
 
+.principal-box-books{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
 .box-books{
     margin: 0 0.5rem;
 }

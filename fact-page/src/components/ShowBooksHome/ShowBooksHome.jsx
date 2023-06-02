@@ -18,18 +18,21 @@ const ShowBooksHome =()=>{
     const img = "../../Public/Imgs/"
 
     return(
-        <div className="principal-main-show-books">
-            {userList.map((user, index) => (
-                <div className='box-books' key={index}>
-                    <div className="container-new-books">
-                        <div className="text-box-book">
-                            <h2>{user.TITULO}</h2>
+        <div className="principal-box-books">
+            <h2>Algunos de nuestros mejores libros</h2>
+            <div className="principal-main-show-books">
+                {userList.map((user, index) => (
+                    <div className='box-books' key={index}>
+                        <div className="container-new-books">
+                                    <div className="text-box-book">
+                                <h2>{user.TITULO}</h2>
+                            </div>
+                            <img src={user.IMAGEN} alt="" />
                         </div>
-                        <img src={user.IMAGEN} alt="" />
                     </div>
-                </div>
-            ))}
-        </div>
+                ))}
+            </div>
+        </div>  
     )
 }
 
