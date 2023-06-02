@@ -3,6 +3,9 @@ import "./AddBook.css";
 import CodeText from "../CodeText/CodeText";
 import Button from "../Button/Button";
 import { Link } from "react-router-dom";
+import axios from 'axios'
+import { useNavigate } from "react-router-dom"
+
 
 const AddBook = () => {
   const [book, actualizarBook] = useState("");
@@ -14,10 +17,10 @@ const AddBook = () => {
   const [yearPublish, actualizarYearPublish] = useState("");
   const [generoLibro, actualizarGeneroLibro] = useState("");
   const [estado, actualizarEstado] = useState("");
+  const navigateTo = useNavigate()
 
-  const sendInfo = (event) => {
-    event.preventDefault();
-    let datosAEnviar = {
+  const sendInfo = () =>{
+    axios.post('http://localhost:3002/AddBook',{
       title: title,
       author: author,
       pages: pages,
@@ -26,8 +29,10 @@ const AddBook = () => {
       yearPublish: yearPublish,
       generoLibro: generoLibro,
       estado: estado,
-    };
-  };
+      Imagen: Imagen
+    })
+    navigateTo('/HomeAdmin')
+  } 
 
   return (
     <section className="login-service">

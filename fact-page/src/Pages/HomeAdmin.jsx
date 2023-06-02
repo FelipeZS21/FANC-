@@ -6,6 +6,7 @@ import Categorias from "../components/Categorias/Categorias"
 import Footer from "../components/Footer/Footer"
 import '../assets/css/HomeRoot.css'
 import HeaderAdmin from "../components/HeaderAdmin/HeaderAdmin"
+import ShowBooksHome from '../components/ShowBooksHome/ShowBooksHome'
 
 
 const HomeAdmin = () =>{
@@ -17,6 +18,9 @@ const HomeAdmin = () =>{
                 </div>
                 <div className="categories-section" id="Categorias"> 
                     <Categorias></Categorias>
+                </div>
+                <div className="showBooks-section" id="show-books-section"> 
+                    <ShowBooksHome></ShowBooksHome>
                 </div>
                 <div className="information-section" id="About-us"> 
                     <Information></Information>
