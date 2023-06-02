@@ -7,13 +7,17 @@
     padding-bottom: 0.5rem;
     border-bottom: solid 0.1rem;
     border-color: #AF601A;
+}
 
+.nuevo-libro{
+    width: 30%;
+    display: flex;
+    justify-content: center;
 }
 
 .container-input {
     width: 100%;
     display: flex;
-    justify-content: center;
     margin-bottom: 2rem;
 }
 

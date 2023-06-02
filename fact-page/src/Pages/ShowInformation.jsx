@@ -5,6 +5,8 @@ import axios from "axios";
 import {Typography, TableBody , Table, TableContainer, TableHead, TableRow, TableCell, Paper, IconButton} from '@mui/material'
 import EditOutlined from '@mui/icons-material/EditOutlined'
 import DeleteOutlineOutlinedIcon from '@mui/icons-material/DeleteOutlineOutlined';
+import { Link } from "react-router-dom";
+import Button from "../components/Button/Button";
 
 
 const ShowInformation = () =>{
@@ -59,10 +61,15 @@ const ShowInformation = () =>{
                 <h2>Administracion de libros</h2>
             </div>
             <div className="container-input">
+                <div className="nuevo-libro">
+                    <Link to="/BookAdd" className="button-add-book">
+                        <Button>Añadir nuevo libro</Button>
+                    </Link>
+                </div>
                 <input 
                     className="form-control inputSearch"
                     value={search} 
-                    placeholder="Busca tu libro o autor favorito"
+                    placeholder="Buscar libro"
                     onChange={handleChange}
                 />
                 <button className="btn btn-sourcess">

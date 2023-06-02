@@ -150,39 +150,40 @@ app.get('/ShowInformation', (req,res) =>{
     })
 })
 
-// app.post('/AddBook', (req, res) =>{
-//     const sentTitulo = req.body.FirstName
-//     const setAutor = req.body.SecondName
-//     const setPublicacion = req.body.FirstLastName
-//     const setGenero = req.body.SecondLastName
-//     const setNpaginas = req.body.Country
-//     const setEstado = req.body.Birthday
-//     const setPrecio = req.body.Email
-//     const setImagen = req.body.Password
+app.post("/BookAdd", (req, res) => {
+    const setId = req.body.Id;
+    const setTitulo = req.body.Titulo;
+    const setAutor = req.body.Autor;
+    const setPublicacion = req.body.Publicacion;
+    const setGenero = req.body.Genero;
+    const setNpagina = req.body.Npaginas;
+    const setEstado = req.body.Estado;
+    const setPrecio = req.body.Precio;
+    const setImagen = req.body.Imagen;
 
-//     const SQL = 'INSERT INTO libros (ID,TITULO, AUTOR, PUBLICACION, GENERO, NPAGINAS, ESTADO, PRECIO, IMAGEN) VALUES (?,?,?,?,?,?,?,?)'
+    const SQL = "INSERT INTO libros (ID,TITULO, AUTOR, PUBLICACION, GENERO,	NPAGINAS, ESTADO, PRECIO, IMAGEN) VALUES (?,?,?,?,?,?,?,?,?)";
 
-//     const Values = [setID,
-//         sentFirstName,
-//         setSecondName, 
-//         setFirstLastName, 
-//         setSecondLastName, 
-//         setBirthday,
-//         setEmail,   
-//         setCountry, 
-//         setPassword,
-//         setUserName,
-//         setIdCargo]
+    const Values = [
+        setId,
+        setTitulo,
+        setAutor,
+        setPublicacion,
+        setGenero,
+        setNpagina,
+        setEstado,
+        setPrecio,
+        setImagen
+    ];
 
-//     db.query(SQL, Values, (err, results) =>{
-//         console.log("hello world")
-//         if(err){
-//             res.send(err)
-//         }
-//         else{
-//             console.log(Values)
-//             res.send({message: 'User Admin Added'})
-//         }
-//     })
-// })
+    db.query(SQL, Values, (err, results) => {
+        if (err) {
+            res.send(err);
+        } else {
+            navigateTo("./HomeUser");
+        }
+    });
+});
+
+
+
 

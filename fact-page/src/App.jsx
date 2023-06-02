@@ -31,6 +31,7 @@ function App() {
         <Route path='/LoginUsers' element={<LoginUsers/>}/>
         <Route path='/usersAdminReg' element={<UsersAdminReg/>}/>
         <Route path='/ShowInformation' element={<ShowInformation/>}/>
+        <Route path='/BookAdd' element={<BookAdd/>}/>
         <Route path='/KillAdmin' element={<KillAdmin/>}/>
         <Route path='/BookAdd' element={<BookAdd/>}/>
         <Route path='/UsersReg' element={<UsersReg/>}/>
