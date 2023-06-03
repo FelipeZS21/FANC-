@@ -36,10 +36,8 @@
 }
 
 .container-new-books:hover{
-    background-color: #AF601A;
-    box-shadow: inset 0px 0px 8px 2px #9c4a01;
-    color: #ffffff;
-    scale: 1.05;
+    color: #cc6b15;
+    scale: 1.08;
 }
 
 .text-box-book{

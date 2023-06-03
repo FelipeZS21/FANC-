@@ -21,7 +21,7 @@ const ShowBooksHome =()=>{
         <div className="principal-box-books">
             <h2 className='principal-text-show-fav-books'>Algunos de nuestros mejores libros</h2>
             <div className="principal-main-show-books">
-                {userList.slice(0, 5).map((user, index) => (
+                {userList.slice(0, 6).map((user, index) => (
                     <div className='box-books' key={index}>
                         <div className="container-new-books">
                         <img src={user.IMAGEN} alt="" />
