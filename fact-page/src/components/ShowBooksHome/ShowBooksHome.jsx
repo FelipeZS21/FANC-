@@ -19,19 +19,20 @@ const ShowBooksHome =()=>{
 
     return(
         <div className="principal-box-books">
-            <h2>Algunos de nuestros mejores libros</h2>
+            <h2 className='principal-text-show-fav-books'>Algunos de nuestros mejores libros</h2>
             <div className="principal-main-show-books">
-                {userList.map((user, index) => (
+                {userList.slice(0, 5).map((user, index) => (
                     <div className='box-books' key={index}>
                         <div className="container-new-books">
-                                    <div className="text-box-book">
+                        <img src={user.IMAGEN} alt="" />
+                            <div className="text-box-book">
                                 <h2>{user.TITULO}</h2>
                             </div>
-                            <img src={user.IMAGEN} alt="" />
                         </div>
                     </div>
                 ))}
             </div>
+            <div className="divisor-of-show-books"></div>
         </div>  
     )
 }

@@ -1,16 +1,32 @@
 .principal-container{
     display: flex;
-    margin: 3rem; 
+}
+
+.informacion-empresa{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin: 0.2rem; 
     align-items: center;
 }
 
 .about-us{
     padding: 1rem;
-    margin-left: 3rem;
+    margin-left: 2rem;
+}
+
+.img-information{
+    margin: 0 2rem;
+    background-image: url('../../Public/Imgs/background-logo-information.jpg');
+    background-position: 50%;
+    background-size: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .img-information img{
-    width: 100%;
+    width: 35%;
     transition: .5s;
 }
 
@@ -25,4 +41,5 @@
 
 .text-information p{
     width: 90%;
+    font-size: 1.1rem;
 }

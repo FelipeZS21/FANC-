@@ -1,7 +1,8 @@
 .box-text-category{
     display: flex;
-    justify-content: center;
+    justify-content: start;
     margin: 1rem;
+    font-size: 0.9rem;
 }
 
 .principal-container-category{
@@ -18,11 +19,11 @@
     align-items: center;
     box-shadow: 2rem;
     border-radius: 4rem;
-    margin: 1rem;
+    margin: 0.6rem;
     padding: 1rem;
     transition: .5s;
     border: solid #000000;
-    border-width: 0.15rem;
+    border-width: 0.09rem;
 }
 
 .box-container-category:hover{

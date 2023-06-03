@@ -1,7 +1,15 @@
 .principal-main-show-books{
-    margin-top: 3rem;
+    margin-top: 2rem;
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
+}
+
+.principal-text-show-fav-books{
+    border-bottom: solid #af601a7e;
+    padding-bottom: 1rem;
+    margin: 0 6rem; 
+    border-width: 0.05rem;
 }
 
 .principal-box-books{
@@ -17,10 +25,8 @@
 
 .container-new-books{
     width: 100%;
-    border: solid;
-    border-width: 0.15rem; 
     border-radius: 0.5rem;
-    margin: 1rem;
+    margin: 0.2rem 0.5rem;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -31,6 +37,7 @@
 
 .container-new-books:hover{
     background-color: #AF601A;
+    box-shadow: inset 0px 0px 8px 2px #9c4a01;
     color: #ffffff;
     scale: 1.05;
 }
@@ -38,7 +45,11 @@
 .text-box-book{
     width: 150px;
     height: 80px;
-    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
 }
 
 .container-new-books img{
@@ -48,5 +59,12 @@
 
 .container-new-books h2{
     font-size: 1rem;
+}
+
+.divisor-of-show-books{
+    border-bottom: solid #af601a7e;
+    padding-bottom: 1rem;
+    margin: 0 6rem; 
+    border-width: 0.05rem;
 }
 
