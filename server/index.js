@@ -2,6 +2,19 @@ const express = require('express')
 const app = express()
 const mysql = require('mysql')
 const cors = require('cors')
+const multer = require('multer')
+const mimeTypes = require('mime-types')
+
+// const storage = multer.diskStorage({
+//     destination: 'uploads/', 
+//     filename: function(req, file, cb){
+//         cb("", Date.now() + "." + file.originalname + "." + mimeTypes.extension(file.mimetype))
+//     }
+// })
+
+const upload = multer({
+    dest: 'uploads/'
+})
 
 app.use(express.json())
 app.use(cors())
@@ -150,7 +163,8 @@ app.get('/ShowInformation', (req,res) =>{
     })
 })
 
-app.post('/AddBook', (req, res) => {
+app.post('/AddBook',upload.single('image-book'),(req, res) => {
+    console.log(upload)
     const setId = req.body.Id;
     const setTitulo = req.body.Titulo;
     const setAutor = req.body.Autor;

@@ -3,6 +3,7 @@ import "./AddBook.css";
 import CodeText from "../CodeText/CodeText";
 import Button from "../Button/Button";
 import axios from "axios";
+import CodeImages from "../CodeImages/CodeImages";
 
 const AddBook = () => {
   const [tituloLibro, actualizarName] = useState("");
@@ -16,8 +17,6 @@ const AddBook = () => {
   const [idLibro, actualizarId] = useState("");
 
   const SentBook = () => {
-    const img = "../../Public/Imgs/" + imagen
-    console.log(img)
     axios.post('http://localhost:3002/AddBook', {
         Id: idLibro,
         Titulo: tituloLibro,
@@ -27,16 +26,16 @@ const AddBook = () => {
         Npaginas: numeroPaginas,
         Estado: estadoLibro,
         Precio: precio,
-        Imagen: img
+        Imagen: imagen
       })
       
-      navigateTo("./HomeAdmin");
+      // navigateTo("./HomeAdmin");
   };
 
   return (
     <section className="admin-register-service">
       <h2>Nuevo Libro</h2>
-      <form onSubmit={SentBook}>
+      <form action="/AddBook" onSubmit={SentBook} encType="multipart/form-data">
         <section className="division-form">
           <div className="subdivision-form">
             <CodeText
@@ -69,12 +68,13 @@ const AddBook = () => {
               placeHolder="Precio"
               valor={precio}
               actualizarValor={actualizarPrecio}></CodeText>
-            <CodeText
+            <CodeImages
+              name="image-book"
               title="Imagen"
               required
               placeHolder="Imagen"
               valor={imagen}
-              actualizarValor={actualizarImagen}></CodeText>
+              actualizarValor={actualizarImagen}></CodeImages>
             <CodeText
               type="date"
               title="Año de Publicacion"
