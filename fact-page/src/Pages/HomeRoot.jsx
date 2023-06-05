@@ -1,4 +1,4 @@
-import image from "../../public/Imgs/Trabajando-en-ello.png"
+import ShowAdmins from '../components/ShowAdmins/ShowAdmins'
 import '../assets/css/HomeRoot.css'
 import HeaderRoot from "../components/HeaderRoot/HeaderRoot"
 
@@ -6,10 +6,12 @@ import HeaderRoot from "../components/HeaderRoot/HeaderRoot"
 const HomeRoot = () =>{
     return(
         <div className="principal">
-            <HeaderRoot></HeaderRoot>
             <main className="container-home-page">
-                
+                <ShowAdmins></ShowAdmins>
             </main>
+            <div className="bar-nav">
+                <HeaderRoot></HeaderRoot>
+            </div>  
         </div>
     )
 }

@@ -5,8 +5,14 @@
     justify-content: center;
     font-family: 'Montserrat', sans-serif;
     align-items: center;
+    margin-top: 6rem;
 }
 
 .container-home-page p{
     font-size: 20px;
+}
+
+.bar-nav{
+    width: 100%;
+    position: fixed;
 }

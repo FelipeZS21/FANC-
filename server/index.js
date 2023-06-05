@@ -200,6 +200,16 @@ app.post('/AddBook',upload.single('image-book'),(req, res) => {
     });
 });
 
+app.get('/ShowAdmins', (req,res) =>{
+    db.query('SELECT * FROM clientes WHERE IdCargo = 2', (err, rows) =>{
+        if(err){
+            res.status(500).send(err)
+        }else{
+            res.status(200).send(rows)
+        }
+    })
+})
+
 
 
 
