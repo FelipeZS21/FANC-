@@ -22,8 +22,9 @@ function Header(){
                     <nav className="menu-header">
                     <Buscador></Buscador>
                         <ul>
-                            <li className='menu-item'>Catalogo</li>
-                            <li className='menu-item'>
+                            <Link to="/CatalogoHome">
+                                <li className='menu-item'>Catalogo</li>
+                            </Link>                            <li className='menu-item'>
                                 <ScrollDirection direction="About-us" name="Informacion">
                                 </ScrollDirection>
                             </li>

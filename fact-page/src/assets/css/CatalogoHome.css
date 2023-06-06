@@ -1,0 +1,23 @@
+.principal-box-Catalogo{
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container-catalogo-home{
+    position: absolute;
+    margin-top: 9rem;
+}
+
+.container-header-home{
+    position: relative;
+    display: flex;
+}
+
+.container-catalogo-home-visual{
+    width: 20%;
+    margin: 0;
+}
+
+.container-selection-catalogo{
+    width: 30%;
+}

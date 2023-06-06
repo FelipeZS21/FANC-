@@ -1,0 +1,68 @@
+.principal-main-show-books{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.principal-text-show-fav-books{
+    border-bottom: solid #af601a7e;
+    padding-bottom: 1rem;
+    margin: 0 6rem; 
+    border-width: 0.05rem;
+}
+
+.principal-box-books{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.box-books{
+    margin: 0 0.5rem;
+}
+
+.container-new-books{
+    width: 100%;
+    border-radius: 0.5rem;
+    margin: 0.2rem 0.5rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    transition: 0.5s;
+}
+
+.container-new-books:hover{
+    color: #cc6b15;
+    scale: 1.08;
+}
+
+.text-box-book{
+    width: 150px;
+    height: 80px;
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+.container-new-books img{
+    width: 150px;
+    height: 240px;
+}
+
+.container-new-books h2{
+    font-size: 1rem;
+}
+
+.divisor-of-show-books{
+    border-bottom: solid #af601a7e;
+    padding-bottom: 1rem;
+    margin: 0 6rem; 
+    border-width: 0.05rem;
+}
+

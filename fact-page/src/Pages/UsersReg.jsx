@@ -4,9 +4,9 @@ import Header from "../components/Header/Header";
 
 const UsersReg = () => {
   return (
-    <div className="principal">
+    <div className="principal-users-register">
       <Header></Header>
-      <section className="login-container">
+      <section className="login-container-user-register">
         <RegUsuarios></RegUsuarios>
       </section>
     </div>

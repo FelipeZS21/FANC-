@@ -12,6 +12,7 @@ import Button from '../Button/Button';
 const ShowAdmins = () =>{
 
     const [userList, setUserList] = useState([])
+    const space = " "
 
 
     useEffect(() => {
@@ -44,10 +45,12 @@ const ShowAdmins = () =>{
                         <TableRow key={index}>
                             <TableCell>{user.ID}</TableCell>
                             <TableCell>
-                                {user.primerNombre}
-                                {user.segundoNombre}
-                                {user.primerApellido}
-                                {user.segundoApellido}
+                                <p>
+                                    {user.primerNombre}{space}
+                                    {user.segundoNombre}{space}
+                                    {user.primerApellido}{space}
+                                    {user.segundoApellido}{space}
+                                </p>
                             </TableCell>
                             <TableCell>{user.usuario}</TableCell>
                             <TableCell>{user.contraseña}</TableCell>
